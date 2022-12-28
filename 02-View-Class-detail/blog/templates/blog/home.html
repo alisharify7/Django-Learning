@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<ul>
+    {# like flask in template we use jinja syntax in here django template engine is simiular to that #}
+    {% for post in blog%}
+    <li>
+        <span>title:{{post.title}}</span>
+        <span>body:{{post.body}}</span>
+        <span>auther:{{post.auther.username}}</span>
+        <span>|:{{post.auther.id}}</span>
+        <span>|:{{post.auther}}</span>
+    </li>
+    
+    {% endfor %}
+</ul>
+{% endblock %}
