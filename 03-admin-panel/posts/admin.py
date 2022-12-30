@@ -13,9 +13,10 @@ class Commentadmininline(admin.TabularInline):
     extra = 0
 
 
+@admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ("id","text", "title", "Created_At")
     inlines = (Commentadmininline,)
 
-admin.site.register(Post,PostAdmin)
+# admin.site.register(Post ,PostAdmin)
 
